@@ -20,6 +20,7 @@ const controller = (req, res) => {
     res.send({message: 'ok'})
 }
 
+app.get('/', (req, res) => res.send({message: 'welcome'}))
 app.get('/mercadopago-ipn', controller)
 app.post('/mercadopago-ipn', controller)
 app.get('/logs', (req, res) => res.sendFile(__dirname + '/' + logfile))
